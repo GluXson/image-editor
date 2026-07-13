@@ -3,12 +3,16 @@
 Prosty edytor obrazu napisany w C++ z wykorzystaniem Qt6 i CMake.
 
 ## Wymagania
+
 - Qt 6.11.0 (komponent MinGW 13.1.0 64-bit)
 - CMake (w wersji dostarczonej z Qt lub systemowej)
 - System Windows 64-bit
 
 ## Instalacja i pierwsze uruchomienie
-1. Sklonuj repozytorium do folderu, np. `D:\Projekty\gimp2`.
+
+1. Przejdz do folderu, w ktorym chcesz umiescic projekt, np. D:\Projekty, i sklonuj repozytorium:
+   git clone https://github.com/GluXson/image-editor.git
+   Utworzy to folder image-editor z zawartoscia projektu.
 2. Uruchom skrypt `preinstall-gimp2.ps1` jako administrator (prawy klik &gt; Uruchom z PowerShell, lub w terminalu:)
    `powershell -ExecutionPolicy Bypass -File preinstall-gimp2.ps1`
 3. Skrypt automatycznie:
@@ -19,9 +23,11 @@ Prosty edytor obrazu napisany w C++ z wykorzystaniem Qt6 i CMake.
 4. Po zakonczeniu uruchom aplikacje klikajac `gimp2.lnk`.
 
 ## Ponowne budowanie
+
 Aby przebudowac projekt po zmianach w kodzie, usun folder `build` i uruchom skrypt ponownie.
 
 ## Struktura projektu
+
 - `CMakeLists.txt` - konfiguracja budowania
 - `main.cpp`, `mainwindow.cpp/h/ui` - glowne okno aplikacji
 - `*handler.cpp/h` - logika operacji na obrazie (punktowe, histogram, konwolucja, binaryzacja, Canny, Harris)
@@ -29,5 +35,6 @@ Aby przebudowac projekt po zmianach w kodzie, usun folder `build` i uruchom skry
 - `preinstall-gimp2.ps1` - skrypt instalacyjno-budujacy
 
 ## Technologie
+
 - C++17, Qt6 (Widgets, Gui, Core)
 - CMake + MinGW 13.1.0 64-bit
