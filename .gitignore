@@ -1,0 +1,31 @@
+# Build i CMake
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.qmlc
+*.jsc
+
+# Qt Creator user files
+*.user
+*.user.*
+
+# Wygenerowane pliki Qt
+*_autogen/
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# Skrot i binarki
+*.lnk
+*.exe
+*.dll
+*.obj
+*.o
+*.pdb
+
+# Windows/edytor
+Thumbs.db
+.vscode/
+.idea/

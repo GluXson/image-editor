@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HistogramPage</class>
+ <widget class="QWidget" name="HistogramPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>360</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Histogram</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>8</number>
+   </property>
+   <property name="leftMargin">
+    <number>8</number>
+   </property>
+   <property name="topMargin">
+    <number>8</number>
+   </property>
+   <property name="rightMargin">
+    <number>8</number>
+   </property>
+   <property name="bottomMargin">
+    <number>8</number>
+   </property>
+
+   <item>
+    <widget class="QGroupBox" name="groupSettings">
+     <property name="title">
+      <string>Ustawienia histogramu</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayoutSettings">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayoutChannels">
+        <item>
+         <widget class="QCheckBox" name="checkR">
+          <property name="text">
+           <string>Czerwony</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkG">
+          <property name="text">
+           <string>Zielony</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkB">
+          <property name="text">
+           <string>Niebieski</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkGray">
+          <property name="text">
+           <string>Szary</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QGroupBox" name="groupOperations">
+     <property name="title">
+      <string>Operacje histogramowe</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayoutOperations">
+      <item>
+       <widget class="QPushButton" name="btnStretchHistogram">
+        <property name="text">
+         <string>Rozciągnięcie histogramu</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnEqualizeHistogram">
+        <property name="text">
+         <string>Wyrównanie histogramu</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QGroupBox" name="groupChart">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>320</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Podgląd histogramu</string>
+     </property>
+     <layout class="QVBoxLayout" name="chartLayout">
+      <property name="leftMargin">
+       <number>4</number>
+      </property>
+      <property name="topMargin">
+       <number>4</number>
+      </property>
+      <property name="rightMargin">
+       <number>4</number>
+      </property>
+      <property name="bottomMargin">
+       <number>4</number>
+      </property>
+     </layout>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QPushButton" name="btnHistogramInfo">
+     <property name="text">
+      <string>Informacje o panelu</string>
+     </property>
+    </widget>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

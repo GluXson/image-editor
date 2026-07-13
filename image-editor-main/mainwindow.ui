@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Netpbm Viewer</string>
+  </property>
+
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>8</number>
+    </property>
+    <property name="leftMargin">
+     <number>8</number>
+    </property>
+    <property name="topMargin">
+     <number>8</number>
+    </property>
+    <property name="rightMargin">
+     <number>8</number>
+    </property>
+    <property name="bottomMargin">
+     <number>8</number>
+    </property>
+
+    <item>
+     <layout class="QVBoxLayout" name="imageAreaLayout">
+      <property name="spacing">
+       <number>8</number>
+      </property>
+
+      <item>
+       <widget class="QLabel" name="imageLabel">
+        <property name="minimumSize">
+         <size>
+          <width>700</width>
+          <height>600</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="text">
+         <string>Otwórz plik PBM PGM PPM JPG PNG</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <item>
+     <widget class="QFrame" name="rightPanel">
+      <property name="minimumSize">
+       <size>
+        <width>280</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>380</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+
+      <layout class="QVBoxLayout" name="rightPanelLayout">
+       <property name="spacing">
+        <number>8</number>
+       </property>
+       <property name="leftMargin">
+        <number>8</number>
+       </property>
+       <property name="topMargin">
+        <number>8</number>
+       </property>
+       <property name="rightMargin">
+        <number>8</number>
+       </property>
+       <property name="bottomMargin">
+        <number>8</number>
+       </property>
+
+       <item>
+        <widget class="QLabel" name="toolLabel">
+         <property name="text">
+          <string>Panel narzędzi</string>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QComboBox" name="toolSelector"/>
+       </item>
+
+       <item>
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+
+         <widget class="QWidget" name="emptyPage">
+          <layout class="QVBoxLayout" name="emptyPageLayout">
+           <item>
+            <widget class="QLabel" name="emptyLabel">
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+             <property name="text">
+              <string>Wybierz panel z listy powyżej.</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QFrame" name="lineUndoTop">
+         <property name="frameShape">
+          <enum>QFrame::HLine</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+        </widget>
+       </item>
+
+       <item>
+        <widget class="QPushButton" name="btnUndo">
+         <property name="text">
+          <string>Cofnij zmianę</string>
+         </property>
+        </widget>
+       </item>
+
+      </layout>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>22</height>
+    </rect>
+   </property>
+
+   <widget class="QMenu" name="menuOpen">
+    <property name="title">
+     <string>Otwórz</string>
+    </property>
+    <addaction name="actionOpenPBM"/>
+    <addaction name="actionOpenPGM"/>
+    <addaction name="actionOpenPPM"/>
+    <addaction name="actionOpenJPG"/>
+    <addaction name="actionOpenPNG"/>
+   </widget>
+
+   <widget class="QMenu" name="menuSave">
+    <property name="title">
+     <string>Zapisz</string>
+    </property>
+    <addaction name="actionSavePBM"/>
+    <addaction name="actionSavePGM"/>
+    <addaction name="actionSavePPM"/>
+    <addaction name="actionSaveJPG"/>
+    <addaction name="actionSavePNG"/>
+   </widget>
+
+   <addaction name="menuOpen"/>
+   <addaction name="menuSave"/>
+  </widget>
+
+  <widget class="QStatusBar" name="statusbar"/>
+
+  <action name="actionOpenPBM">
+   <property name="text">
+    <string>PBM</string>
+   </property>
+  </action>
+  <action name="actionOpenPGM">
+   <property name="text">
+    <string>PGM</string>
+   </property>
+  </action>
+  <action name="actionOpenPPM">
+   <property name="text">
+    <string>PPM</string>
+   </property>
+  </action>
+  <action name="actionOpenJPG">
+   <property name="text">
+    <string>JPG</string>
+   </property>
+  </action>
+  <action name="actionOpenPNG">
+   <property name="text">
+    <string>PNG</string>
+   </property>
+  </action>
+
+  <action name="actionSavePBM">
+   <property name="text">
+    <string>PBM</string>
+   </property>
+  </action>
+  <action name="actionSavePGM">
+   <property name="text">
+    <string>PGM</string>
+   </property>
+  </action>
+  <action name="actionSavePPM">
+   <property name="text">
+    <string>PPM</string>
+   </property>
+  </action>
+  <action name="actionSaveJPG">
+   <property name="text">
+    <string>JPG</string>
+   </property>
+  </action>
+  <action name="actionSavePNG">
+   <property name="text">
+    <string>PNG</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
